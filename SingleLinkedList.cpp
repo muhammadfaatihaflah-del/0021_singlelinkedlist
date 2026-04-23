@@ -54,4 +54,14 @@ public:
         previous->next= nodebaru;
      }
      bool listempty()
+     {
+        return(start == NULL);
+     }
+
+     bool search (int nim , node *&previous,node *&current)
+     {
+        previous=start;
+        current=start;
+        
+     }
 };
