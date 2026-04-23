@@ -83,4 +83,22 @@ public:
             delete current;
             return true;
      }
+     void tranvers()
+     {
+        if (listempty())
+        {
+            cout << "\nlist kosong\n";
+        }
+        else {
+            cout << "\ndata didalam list adalah : \n";
+            node *currentnode =start;
+
+            while (currentnode != NULL)
+            {
+                cout<< currentnode ->noMhs <<endl;
+                currentnode = currentnode->next;
+            }
+            cout << endl;
+        }
+     }
 };
