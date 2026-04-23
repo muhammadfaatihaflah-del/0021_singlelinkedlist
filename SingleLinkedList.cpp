@@ -2,3 +2,7 @@
 #include <string>
 using namespace std;
 
+class node{
+    int noMhs;
+    int *next;
+};
