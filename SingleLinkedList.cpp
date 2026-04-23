@@ -5,7 +5,7 @@ using namespace std;
 class node{
 public:
     int noMhs;
-    int *next;
+    node *next;
 };
 
 class linkedlist{
@@ -62,6 +62,25 @@ public:
      {
         previous=start;
         current=start;
-        
+
+        while (current != NULL && nim != current->noMhs)
+        {
+            previous=current;
+            current=current->next;
+        }
+        return(current!= NULL);
+     }
+     bool delnode (int nim)
+     {
+        node *current ,*previous;
+
+        if (!search (nim,previous,current))
+            return false;
+        if (current == start)
+            start=start->next;
+        else    
+            previous->next = current->next;
+            delete current;
+            return true;
      }
 };
