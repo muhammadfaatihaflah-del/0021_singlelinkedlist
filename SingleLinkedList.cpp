@@ -20,7 +20,7 @@ public:
     void addnode()
     {
         int nim;
-        cout << "n\masukkan nomor mahasiswa : ";
+        cout << "\nmasukkan nomor mahasiswa : ";
         cin >>nim;
 
         node *nodebaru = new node;
@@ -28,7 +28,21 @@ public:
 
         if (start == NULL || nim <= start ->noMhs)
         {
-            
+            if (start != NULL && nim == start ->noMhs)
+            {
+                cout << "\nduplikasi noMhs tidak diijinkan\n";
+                return;
+            }
+            nodebaru->next = start;
+            start= nodebaru;
+            return;
         } 
+        node *previous = start;
+        node *current = start;
+
+        while (current != NULL && nim > current -> noMhs)
+        {
+            
         }
+     }
 };
