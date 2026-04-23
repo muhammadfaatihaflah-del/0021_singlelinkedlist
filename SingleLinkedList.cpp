@@ -17,5 +17,18 @@ public:
         start = NULL;
 
     }
-    
+    void addnode()
+    {
+        int nim;
+        cout << "n\masukkan nomor mahasiswa : ";
+        cin >>nim;
+
+        node *nodebaru = new node;
+        nodebaru->noMhs = nim; 
+
+        if (start == NULL || nim <= start ->noMhs)
+        {
+            
+        } 
+        }
 };
