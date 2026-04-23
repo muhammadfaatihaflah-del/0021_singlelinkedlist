@@ -42,7 +42,16 @@ public:
 
         while (current != NULL && nim > current -> noMhs)
         {
-            
+            if(nim == current ->noMhs)
+            {
+                cout <<"\n duplikasi noMhs tidak diijinkan";
+                return;
+            }
+            previous = current;
+            current = current->next;
         }
+        nodebaru->next=current;
+        previous->next= nodebaru;
      }
+     bool listempty()
 };
